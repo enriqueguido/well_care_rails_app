@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+    <title>WellCareApp</title>
+<head>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../app/assets/stylesheets/nucleo/css/nucleo.css" rel="stylesheet">
+  <!-- Argon CSS -->
+  <link type="text/css" href="../app/assets/stylesheets/nucleo/css/nucleo.css" rel="stylesheet">
+</head>
+<%= yield %>
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" href="">
+          <img src="../app/assets/images/brand/WhaleCareBandaidLogo.png"> Wellcare
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="../index.html">
+                  <img src="../assets/img/brand/blue.png">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">Menu</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="#" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i class="ni ni-badge"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h6 class="heading text-primary mb-md-1">About Us</h6>
+                      <p class="description d-none d-md-inline-block mb-0">Learn more about our company, our founders, and why we got started.</p>
+                    </div>
+                  </a>
+                  <a href="#" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i class="ni ni-active-40"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h5 class="heading text-primary mb-md-1">Contact Us</h5>
+                      <p class="description d-none d-md-inline-block mb-0">Send us a message if you have any question or sugestions, we would love to hear from you.</p>
+                    </div>
+                  </a>
+                  <a href="#" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i class="ni ni-lock-circle-open"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h5 class="heading text-primary mb-md-1">Log In or Resgister</h5>
+                      <p class="description d-none d-md-inline-block mb-0">Log in if you have an account or quickly go through our registration process.</p>
+                    </div>
+                  </a>
+                  <a href="#" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i class="ni ni-single-copy-04"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h5 class="heading text-primary mb-md-1">Blog</h5>
+                      <p class="description d-none d-md-inline-block mb-0">Recieve our newsletter, and read our blog created by physicians and other industry professionals.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">What We Offer</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                      <i class="ni ni-briefcase-24"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h6 class="heading text-warning mb-md-1">For Physicians</h6>
+                      <p class="description d-none d-md-inline-block mb-0">Learn how we can help you turn your practice to a concierge practice or simply join one of our very well resprected practices.</p>
+                    </div>
+                  </a>
+                  <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                      <i class="ni ni-single-02"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h5 class="heading text-warning mb-md-1">For Parents</h5>
+                      <p class="description d-none d-md-inline-block mb-0">See how becoming a member can drastically change the life and care your child receives.</p>
+                    </div>
+                  </a>
+                  <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                      <i class="ni ni-credit-card"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h5 class="heading text-success mb-md-1">For Investors</h5>
+                      <p class="description d-none d-md-inline-block mb-0">Join our round A of founding and be an integral part in transforming the healthcare indusatry.</p>
+                    </div>
+                  </a>
+                  <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                      <i class="ni ni-tie-bow"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h5 class="heading text-success mb-md-1">Physician Recruitment</h5>
+                      <p class="description d-none d-md-inline-block mb-0">Get access to our recruters and let our team of professionals find the perfect pediatrician for your practice.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <div class="dropdown">
+              <!-- <a href="#" class="btn btn-default dropdown-toggle " data-toggle="dropdown" id="navbarDropdownMenuLink2">
+                  <img src="../../assets/img/icons/flags/US.png" /> Flags
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                  <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="../../assets/img/icons/flags/DE.png" /> Deutsch
+                      </a>
+                  </li>
+                  <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="../../assets/img/icons/flags/GB.png" /> English(UK)
+                      </a>
+                  </li>
+                  <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="../../assets/img/icons/flags/FR.png" /> Français
+                      </a>
+                  </li>
+              </ul>
+            </div> -->
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                <i class="ni ni-collection d-lg-none"></i>
+                <span class="nav-link-inner--text">Temp Page</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="../examples/landing.html" class="dropdown-item">Landing</a>
+                <a href="../examples/profile.html" class="dropdown-item">Profile</a>
+                <a href="../examples/login.html" class="dropdown-item">Login</a>
+                <a href="../examples/register.html" class="dropdown-item">Register</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
+                <i class="fa fa-facebook-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Facebook</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
+                <i class="fa fa-instagram"></i>
+                <span class="nav-link-inner--text d-lg-none">Instagram</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+                <i class="fa fa-twitter-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="carousel_example" class="position-relative carousel slide" data-ride="carousel">
+      <!-- shape Hero -->
+      <section class="section section-lg section-shaped pb-250 carousel-inner">
+          <div class="carousel-item active section section-lg section-shaped pb-250 shape">
+            <img class="shape shape-style-1 shape-default" src="../assets/img/theme/service3.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item section section-lg section-shaped pb-250 shape">
+            <img class="shape shape-style-1 shape-default" src="../assets/img/theme/baby-210194_1920.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item section section-lg section-shaped pb-250 shape">
+            <img class="shape shape-style-1 shape-default" src="../assets/img/theme/baby-hero.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item section section-lg section-shaped pb-250 shape">
+            <img class="shape shape-style-1 shape-default" src="../assets/img/theme/pexels-photo-377058.jpeg" alt="Second slide">
+          </div>
+        <div class="shape shape-style-1 shape-default">
+          <span class="floating-shape-home-1"></span>
+          <span class="floating-shape-home-2"></span>
+          <span class="floating-shape-home-3"></span>
+          <span class="floating-shape-home-1"></span>
+          <span class="floating-shape-home-3"></span>
+          <span class="floating-shape-home-2"></span>
+          <span class="floating-shape-home-2"></span>
+          <span class="floating-shape-home-1"></span>
+          <span class="floating-shape-home-3"></span>
+        </div>
+        <div class="container py-lg-md d-flex">
+          <div class="col px-0">
+            <div class="row">
+              <div class="col-lg-6">
+                <h1 class="display-3  text-white">WellCare
+                  <span>concierge pediatric service</span>
+                </h1>
+                <p class="lead  text-white">The healthcare your children deserve at a price you can afford.</p>
+                <div class="btn-wrapper">
+                  <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="btn btn-info btn-icon mb-3 mb-sm-0">
+                    <span class="btn-inner--icon"><i class="ni ni-lock-circle-open"></i></span>
+                    <span class="btn-inner--text">Sign Up</span>
+                  </a>
+                  <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-white btn-icon mb-3 mb-sm-0">
+                    <span class="btn-inner--icon"><i class="ni ni-collection"></i></span>
+                    <span class="btn-inner--text">Contact Us</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="separator separator-bottom separator-skew">
+          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+      </section>
+      <!-- 1st Hero Variation -->
+    </div>
+    <section class="section section-lg">
+      <div class="container">
+        <div class="row row-grid align-items-center">
+          <div class="col-md-6 order-md-2">
+            <object type="image/svg+xml" data="../app/assets/images/theme/program-feature-animation.svg" class="img-fluid floating">
+                <!-- Your fall back here -->
+              <!-- <img src="image.svg" /> -->
+            </object>
+            <!-- <img src="../assets/img/theme/program-feature-animation.svg" class="img-fluid floating"> -->
+          </div>
+          <div class="col-md-6 order-md-1">
+            <div class="pr-md-5">
+              <div class="nav-wrapper">
+                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="ni ni-mobile-button mr-2"></i>Our App</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="ni ni-single-02 mr-2"></i>For Parents</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="ni ni-briefcase-24 mr-2"></i>For Physicians</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card shadow">
+                <div class="card-body">
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                      <p class="description">An app designed for your child, with you in mind, but created for your doctor. While your toodler uses it to play fun interactive games designed to increase brain activity, your teen uses the cycle-tracker or answers questions prior to the next appointment. Have nutrional plans and recepies from your doctor at the palm of your hand, and be connected wit your peditrician so you can manage your childs' health records, prescriptions, appointments, and much more.</p>
+                      <!-- <p class="description">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.</p> -->
+                    </div>
+                    <!-- <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                      <p class="description">With our web-app you can make and cancel appointments, have instant access to your childs' medical records, and view test results instantly. Keep an open line of communication with your physician through our application and never worry again about the health of your children. You can now have a dedicated platform to track the health of your child and recive the dedicated care.</p>
+                    </div> -->
+                    <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                      <p class="description">No longer feel rush in your doctor visits, spend less than 10 minutes waiting to see your physician, and stop worrying if your child has all the care they need for their age and life stage. Have an open and direct line of commuication with your doctor and know at all times if you should seek imitiate attention or wait to see the doctor. Long gone are the days where your insurance dictates the kind of care your child recives. Have the experience team and technology to take the care of your children to the next level and prepare for a long and healthy relationship with your pediatrician.</p>
+                    </div>
+                    <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+                      <p class="description">With our unique business model you can now see less patients and give each one the dedicated care and time they not only need, but deserved spending one hour or more with each patient, all without harming your bottom line. Insurance is no longer a reason to let your patients walk out of the office without the proper care or to not test conditions that are harmful to the development and growth of your patients. Fall in love with medicine again and let us help you show your patients how much your trully care about their wellbeing.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <!-- <div class="icon icon-lg icon-shape shadow rounded-circle mb-5 features-icon icon-shape-color-background">
+                <i class="ni ni-settings-gear-65"></i>
+              </div>
+              <h3>What we do</h3>
+              <p>Our business model allows our pediatricians cater the personalize services they should have. We test for a range of developmental conditions and
+                Joining a WellCare pediatrician grants you access to many great resources to help you manage the health of your children. One of the great tools you will have acess to is our web-application, design & created, with you in mind. These are some of the cool features you get with our great webapp!</p>
+              <ul class="list-unstyled mt-5">
+                <li class="py-2">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <div class="badge badge-circle icon-shape-color-background-bullets mr-3">
+                        <i class="ni ni-user-run"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Access your child's medical record</h6>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <div class="badge badge-circle icon-shape-color-background-bullets mr-3">
+                        <i class="ni ni-sound-wave"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Medical blog</h6>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <div class="badge badge-circle icon-shape-color-background-bullets mr-3">
+                        <i class="ni ni-satisfied"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Manage appointments</h6>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <div class="badge badge-circle icon-shape-color-background-bullets mr-3">
+                        <i class="ni ni-satisfied"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Healthy meal recepies & weight management</h6>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <div class="badge badge-circle icon-shape-color-background-bullets mr-3">
+                        <i class="ni ni-satisfied"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Child safety and advisories</h6>
+                    </div>
+                  </div>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section bg-secondary">
+      <div class="container">
+        <div class="row row-grid align-items-center">
+          <div class="col-md-6">
+            <div class="card bg-default shadow border-0">
+              <img src="../assets/img/theme/hero6.jpg" class="card-img-top">
+              <blockquote class="card-blockquote">
+                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="svg-bg">
+                  <polygon points="0,52 583,95 0,95" class="fill-default" />
+                  <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
+                </svg>
+                <h4 class="display-3 font-weight-bold text-white">Physicians</h4>
+                <p class="lead text-italic text-white">With us you gain the dedicated team and the tools you need to change your whole approach to medicine. Give your patients more of your time and with our unique business model even test for conditions not covered under insurance. Be a key component in the early detection of developmental and behavioural problems that can severily affect the life of your patients. Give your patients a more personable and gratifying experience while you fall in love with medicine again. Join us for a whole new pediatric experience!</p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pl-md-5">
+              <div class="icon icon-lg icon-shape icon-customer-feed shadow rounded-circle mb-5">
+                <i class="ni ni-satisfied"></i>
+              </div>
+              <h3>Parents</h3>
+              <p class="lead">We put our physicians through a credentialing process and a very strict background check. Having a pediatrician that is trustworthy, qualified, and has the tool at their disposal to detect problems that can severly affect the growth and life quality of your child is extrely important.</p>
+              <p>With a WellCare pediatrician you get same day apppointments, direct communication with your pediatrician at any time, extended appointment times, and a specialized annual examination designed to detect for an array of disseases and conditions, among many more benefits.</p>
+              <a class="font-weight-bold text-customer-color mt-5">The care and peace of mind your family needs.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section pb-0 bg-gradient-blue">
+      <div class="container">
+        <div class="row row-grid align-items-center">
+          <div class="col-md-6 order-lg-2 ml-lg-auto">
+            <!-- <div class="position-relative pl-md-5">
+              <img src="../assets/img/ill/Docs.png" class="img-center img-fluid">
+            </div> -->
+            <object type="image/svg+xml" data="../assets/img/ill/group-docs.svg" class="img-center img-fluid">
+            </object>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="d-flex px-3">
+              <div>
+                <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                  <i class="ni ni-laptop text-primary"></i>
+                </div>
+              </div>
+              <div class="pl-4">
+                <h4 class="display-3 text-white">Modern Interface</h4>
+                <p class="text-white">Designed by top professionals to provide ease of access, with the quality that lets users like you find everything at the touch of a button.</p>
+              </div>
+            </div>
+            <div class="card shadow shadow-lg--hover mt-5">
+              <div class="card-body">
+                <div class="d-flex px-3">
+                  <div>
+                    <div class="icon icon-shape bg-gradient-hot-pink rounded-circle text-white">
+                      <i class="ni ni-tablet-button"></i>
+                    </div>
+                  </div>
+                  <div class="pl-4">
+                    <h5 class="title text-hot-pink">Works On Any Device</h5>
+                    <p>Our mobile web-application is designed to work on any deviced, no need to download an app all you need is a solid internet connection.</p>
+                    <a href="#" class="text-hot-pink">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card shadow shadow-lg--hover mt-5">
+              <div class="card-body">
+                <div class="d-flex px-3">
+                  <div>
+                    <div class="icon icon-shape bg-gradient-hot-pink rounded-circle text-white">
+                      <i class="ni ni-settings"></i>
+                    </div>
+                  </div>
+                  <div class="pl-4">
+                    <h5 class="title text-hot-pink">Awesome Support</h5>
+                    <p>Our team is here to provide top notch customer support for all our members with any of their needs.</p>
+                    <a href="#" class="text-hot-pink">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+    <section class="section section-lg">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-lg">
+          <div class="col-lg-8">
+            <h2 class="display-3">Opportunities With Our Team</h2>
+            <p class="lead text-muted">Our team is currently looking for a Chief Medical Officer to help expand our product line and help execute our vision. If that is you, we would love to hear from you!</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="../assets/img/theme/team-2-800x800.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Virginia Apgar</span>
+                  <small class="h6 text-muted">Chief Medical Officer</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-team-pink btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-team-pink btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-team-pink btn-icon-only rounded-circle">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section class="section section-lg pt-0">
+      <div class="container">
+        <div class="card bg-gradient-blue shadow-lg border-0">
+          <div class="p-5">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <h3 class="text-white">Investor opportunities.</h3>
+                <p class="lead text-white mt-3">If you would like to join our team, or you are an aninvestor and would like to get more information about our series A round of funding please click to learn more.</p>
+              </div>
+              <div class="col-lg-3 ml-lg-auto">
+                <a href="" class="btn btn-lg btn-block btn-white">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="section section-lg bg-gradient-blue"> -->
+    <section class="section section-lg bg-gradient-blue">
+      <div class="container pt-lg pb-300">
+        <div class="row text-center justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="display-3 text-white">What you get with a WellCare Pediatrician</h2>
+            <p class="lead text-white">These are some of the many benefits of having a WellCare Pediatrician.<br>
+            Contact us so we can tell you all the other benifits you and your family get!</p>
+          </div>
+        </div>
+        <div class="row row-grid mt-5">
+          <div class="col-lg-4 info-space">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-satisfied text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3">Nutrition Management</h5>
+            <p class="text-white mt-3">Get healty meal recepies or follow the meal plan your doctor assignes you.</p>
+          </div>
+          <div class="col-lg-4 info-space">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-delivery-fast text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3">Prescrition Management</h5>
+            <p class="text-white mt-3">Get seamless prescrition rifills and tools that make it easier to follow your prescrition treatment.</p>
+          </div>
+          <div class="col-lg-4 info-space">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-folder-17 text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3">Digital Health Records</h5>
+            <p class="text-white mt-3">View lab results, exam results, and much more.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-time-alarm text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3">Same Day Appointments</h5>
+            <p class="text-white mt-3">Get same day appointments when needed.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-spaceship text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3">Developmental Exams & Games</h5>
+            <p class="text-white mt-3">Get a yearly physical and games specifically designed for the development of your child.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-chat-round text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3">Chat Directly With Your Doctor</h5>
+            <p class="text-white mt-3">Use our web application to chat directly with your Pediatrician.</p>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="gradient-horizontal section-shaped shape-style-1 shape-default" points="2560 0 2560 100 0 100">
+        </svg>
+      </div>
+    </section>
+    <!-- <section class="section section-lg section-shaped"> -->
+    <section class="section section-lg section-shaped">
+    <section class="section section-lg pt-lg-0 mt--200">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="row row-grid">
+              <div class="col-lg-4">
+                <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                    <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                      <i class="ni ni-single-02"></i>
+                    </div>
+                    <h6 class="text-primary text-uppercase">Are You A Parent?</h6>
+                    <p class="description mt-3">See how our pediatricians can provide your child the preventative care that can increase life quality and early detection of illneses.</p>
+                    <!-- <div>
+                      <span class="badge badge-pill badge-primary">design</span>
+                      <span class="badge badge-pill badge-primary">system</span>
+                      <span class="badge badge-pill badge-primary">creative</span>
+                    </div> -->
+                    <a href="#" class="btn btn-primary mt-4">Learn more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
+                      <i class="ni ni-building"></i>
+                    </div>
+                    <h6 class="text-success text-uppercase">Own A Practice?</h6>
+                    <p class="description mt-3">Let our team of recruters find the perfect pediatricians for your ptractice or see how you can joint our group and turn your practice to a concierge service practice. We have the platform you need to give your patients the time and care they deserve.</p>
+                    <!-- <div>
+                      <span class="badge badge-pill badge-success">business</span>
+                      <span class="badge badge-pill badge-success">vision</span>
+                      <span class="badge badge-pill badge-success">success</span>
+                    </div> -->
+                    <a href="#" class="btn btn-success mt-4">Learn more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                    <div class="icon icon-shape icon-shape-danger rounded-circle mb-4">
+                      <i class="ni ni-compass-04"></i>
+                    </div>
+                    <h6 class="text-danger text-uppercase">Find A Doctor</h6>
+                    <p class="description mt-3">We have phycisians through the state of Florida and are constanlty expanding. Click the search button below to find a doctor in your are.</p>
+                    <!-- <div>
+                      <span class="badge badge-pill badge-danger">marketing</span>
+                      <span class="badge badge-pill badge-danger">product</span>
+                      <span class="badge badge-pill badge-danger">launch</span>
+                    </div> -->
+                    <a href="#" class="btn btn-danger mt-4">Find Doctor</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="section section-lg section-shaped"> -->
+      <div class="shape shape-contact-style-1 shape-contact-default">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="container py-md">
+        <div class="row row-grid justify-content-between align-items-center">
+          <div class="col-lg-6">
+            <h3 class="display-3 text-white">Lets Keep In Touch!
+              <span class="text-white">We love to hear from you</span>
+            </h3>
+            <p class="lead text-white">Our team is ready to answered any questions you may have and we are here to help you wether you are a parent, a physician, or an investor. Lets work togerther to change the way the healthcare system works.</p>
+            <div class="btn-wrapper">
+              <a href="./examples/login.html" class="btn btn-info-pink btn-sign-in">Login Page</a>
+              <a href="./examples/register.html" class="btn btn-white btn-sign-in">Register Page</a>
+            </div>
+          </div>
+          <div class="col-lg-5 mb-lg-auto">
+            <div class="transform-perspective-right">
+              <div class="card bg-secondary shadow border-0">
+                <div class="card-header bg-white pb-5">
+                  <div class="text-muted text-center mb-3">
+                    <small>Sign in with</small>
+                  </div>
+                  <div class="btn-wrapper text-center">
+                    <a href="#" class="btn btn-neutral btn-icon btn-sign-in">
+                      <span class="btn-inner--icon btn-sign-in">
+                        <!-- <img src="../assets/img/icons/common/github.svg"> -->
+                        <i class="fa fa-facebook"></i>
+                      </span>
+                      <span class="btn-inner--text">Facebook</span>
+                    </a>
+                    <a href="#" class="btn btn-neutral btn-icon btn-sign-in">
+                      <span class="btn-inner--icon btn-sign-in">
+                        <!-- <img src="../assets/img/icons/common/google.svg"> -->
+                        <i class="fa fa-google"></i>
+                      </span>
+                      <span class="btn-inner--text">Google</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="card-body px-lg-5 py-lg-5">
+                  <div class="text-center text-muted mb-4">
+                    <small>Send us a message or sign-in on top</small>
+                  </div>
+                  <form role="form">
+                    <div class="form-group mt-5">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Your name" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group mb-3">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Email" type="email">
+                      </div>
+                    </div>
+                    <div class="form-group mb-4">
+                      <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                    </div>
+                    <div class="text-center">
+                      <button type="button" class="btn btn-primary my-4">Send Message</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+    <!-- <section class="section section-lg pt-lg-0 section-contact-us">
+      <div class="container">
+        <div class="row justify-content-center mt--300">
+          <div class="col-lg-8">
+            <div class="card bg-gradient-secondary shadow">
+              <div class="card-body p-lg-5">
+                <h4 class="mb-1">Want to work with us?</h4>
+                <p class="mt-0">Your project is very important to us.</p>
+                <div class="form-group mt-5">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Your name" type="text">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Email address" type="email">
+                  </div>
+                </div>
+                <div class="form-group mb-4">
+                  <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default btn-round btn-block btn-lg">Send Message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- <section class="section section-lg">
+      <div class="container">
+        <div class="row row-grid justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-3">Do you love this awesome
+              <span class="text-success">Design System for Bootstrap 4?</span>
+            </h2>
+            <p class="lead">Cause if you do, it can be yours for FREE. Hit the button below to navigate to Creative Tim where you can find the Design System in HTML. Start a new project or give an old Bootstrap project a new look!</p>
+            <div class="btn-wrapper">
+              <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-primary mb-3 mb-sm-0">Download HTML</a>
+            </div>
+            <div class="text-center">
+              <h4 class="display-4 mb-5 mt-5">Available on these technologies</h4>
+              <div class="row justify-content-center">
+                <div class="col-lg-2 col-4">
+                  <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Bootstrap 4 - Most popular front-end component library">
+                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg" class="img-fluid">
+                  </a>
+                </div>
+                <div class="col-lg-2 col-4">
+                  <a href=" https://www.creative-tim.com/product/vue-argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Vue.js - The progressive javascript framework">
+                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg" class="img-fluid">
+                  </a>
+                </div>
+                <div class="col-lg-2 col-4">
+                  <a href=" https://www.sketchapp.com/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Sketch - Digital design toolkit">
+                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg" class="img-fluid opacity-3">
+                  </a>
+                </div>
+                <div class="col-lg-2 col-4">
+                  <a href=" https://www.adobe.com/products/photoshop.html" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Adobe Photoshop - Software for digital images manipulation">
+                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg" class="img-fluid opacity-3">
+                  </a>
+                </div>
+                <div class="col-lg-2 col-4">
+                  <a href=" https://angularjs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Angular - One framework. Mobile &amp; desktop">
+                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg" class="img-fluid opacity-3">
+                  </a>
+                </div>
+                <div class="col-lg-2 col-4">
+                  <a href=" https://angularjs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] React - A JavaScript library for building user interfaces">
+                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg" class="img-fluid opacity-3">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  </main>
+  <section class="section section-lg">
+    <div class="container">
+      <div class="row row-grid justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="display-3">Sign-Up to our blog & newsletter
+            <!-- <span class="text-success">Design System for Bootstrap 4?</span> -->
+          </h2>
+          <p class="lead">Cause if you do, it can be yours for FREE. Hit the button below to navigate to Creative Tim where you can find the Design System in HTML. Start a new project or give an old Bootstrap project a new look!</p>
+          <div class="text-center">
+            <h4 class="display-4 mb-5 mt-5">Available on these technologies</h4>
+          </div>
+            <!-- <div class="btn-wrapper"> -->
+              <button type="button" class="btn btn-primary btn-sign-in">Download HTML</button>
+            <!-- </div> -->
+            <div class="col-md-6 left">
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- <div class="rounded shadow-lg overflow-hidden transform-perspective-right"> -->
+  <!-- <div id="carousel_example" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel_example" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel_example" data-slide-to="1"></li>
+    </ol> -->
+
+  <!-- </div> -->
+
+
+<footer class="footer has-cards">
+  <div class="container">
+    <div class="row row-grid align-items-center my-md">
+      <div class="col-lg-6">
+        <h3 class="text-primary font-weight-light mb-2">Thank you for your interest!</h3>
+        <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
+      </div>
+      <div class="col-lg-6 text-lg-center btn-wrapper">
+        <a target="_blank" href="" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Like us">
+          <i class="fa fa-facebook-square"></i>
+        </a>
+        <a target="_blank" href="" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" data-toggle="tooltip" data-original-title="Follow us">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a target="_blank" href="" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Follow us">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <!-- <a target="_blank" href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Star on Github">
+          <i class="fa fa-github"></i>
+        </a> -->
+      </div>
+    </div>
+    <hr>
+    <div class="row align-items-center justify-content-md-between">
+      <div class="col-md-6">
+        <div class="copyright">
+          &copy; WellCare 2019. Created by
+          <a href="https://www.codeblock.life" target="_blank">CodeBlock</a>.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav nav-footer justify-content-end">
+          <li class="nav-item">
+            <a href="" class="nav-link" target="_blank">WellCare</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link" target="_blank">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link" target="_blank">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link" target="_blank">WellCare Term of Use</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- Core -->
+  <script src="../app/assets/stylesheets/jquery 2.30.12 PM/jquery.min.js"></script>
+  <script src="../app/assets/stylesheets/popper/popper.min.js"></script>
+  <script src="../app/assets/stylesheets/bootstrap/bootstrap.min.js"></script>
+  <script src="../app/assets/stylesheets/headroom/headroom.min.js"></script>
+  <!-- Argon JS -->
+  <script src="../app/assets/javascripts/argon.js"></script>
+  <!-- Optional JS -->
+  <script src="../app/assets/stylesheets/onscreen/onscreen.min.js"></script>
+  <script src="../app/assets/stylesheets/nouislider/js/nouislider.min.js"></script>
+  <script src="../app/assets/stylesheets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+</body>
+</html>
